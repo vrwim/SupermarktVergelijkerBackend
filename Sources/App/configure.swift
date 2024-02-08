@@ -14,7 +14,7 @@ public func configure(_ app: Application) async throws {
         username: Environment.get("DATABASE_USERNAME") ?? "vapor_username",
         password: Environment.get("DATABASE_PASSWORD") ?? "UleD3b5t8EkYHXw7JKhhxNh",
         database: Environment.get("DATABASE_NAME") ?? "vapor_database",
-        tls: .none)
+        tls: .disable)
     ), as: .psql)
 
     app.migrations.add(CreateStore())
